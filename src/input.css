@@ -6,3 +6,8 @@
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-Regular.ttf");
   }
+
+  @font-face {
+    font-family: "VAGRoundedBT";
+    src: url("../fonts/VAGRoundedBT-Regular.otf");
+  }
