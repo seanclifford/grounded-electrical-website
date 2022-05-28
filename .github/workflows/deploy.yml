@@ -8,14 +8,14 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
     steps:
     - name: ⏬ Pull down code
       uses: actions/checkout@v3
-      
+
     - name: 🟩 Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
@@ -35,7 +35,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        dry-run: true
         local-dir: ./src/
         server-dir: ./public_html/
         exclude: |
