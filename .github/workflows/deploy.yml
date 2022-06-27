@@ -28,6 +28,10 @@ jobs:
     - name: 🔄 Build CSS
       run: npx tailwindcss -i ./src/input.css -o ./src/dist/output.css --minify
 
+    - name: Version CSS references
+      working-directory: ./src
+      run: for file in *.html; do sed -i "s|dist/output.css|dist/output.css?v=${EPOCHSECONDS}|" "$file"; done
+
     - name: 📂 Sync files to web server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
