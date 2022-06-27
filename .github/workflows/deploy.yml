@@ -1,4 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the css then TODO: deploy to the website
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the css then deploy to the website
 
 name: Build and Deploy
 
