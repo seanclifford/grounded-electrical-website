@@ -14,10 +14,12 @@
 <body class="bg-white dark:bg-geblue text-geblue dark:text-white transition-all">
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <g id="gelogo" class="fill-white dark:fill-geblue" transform="matrix(.35278 0 0 -.35278 -29.351 122.65)">
-        <g transform="translate(356.96 210.5)" class="fill-geblue dark:fill-white">
+      <g id="gelogobackground" transform="matrix(.35278 0 0 -.35278 -29.351 122.65)">
+        <g transform="translate(356.96 210.5)">
           <path d="m0 0c0-75.441-61.157-136.6-136.6-136.6s-136.6 61.157-136.6 136.6 61.156 136.6 136.6 136.6 136.6-61.157 136.6-136.6" />
         </g>
+      </g>
+      <g id="gelogo" transform="matrix(.35278 0 0 -.35278 -29.351 122.65)">
         <g transform="translate(223.36 162.23)">
           <path d="m0 0v51.4h56.811c-4.215-28.129-27.872-49.979-56.811-51.4m75.479 60.4c0 4.971-4.03 9-9 9h-69.479c-4.971 0-9-4.029-9-9 0-3.917 2.507-7.24 6-8.477v-51.924c-31.959 1.569-57.478 28.06-57.478 60.401 0 33.348 27.13 60.479 60.478 60.479 14.156 0 27.922-4.99 38.762-14.052 3.814-3.188 9.489-2.681 12.677 1.133 3.188 3.813 2.681 9.489-1.133 12.678-14.072 11.762-31.937 18.241-50.306 18.241-43.273 0-78.478-35.205-78.478-78.479 0-42.266 33.592-76.817 75.478-78.401v-13.264h-23.467c-1.657 0-3-1.342-3-3 0-1.657 1.343-3 3-3h52.934c1.657 0 3 1.343 3 3 0 1.658-1.343 3-3 3h-23.467v13.264c41.886 1.584 75.479 36.135 75.479 78.401"/>
         </g>
@@ -28,7 +30,7 @@
           <path d="m0 0h-17.375c-1.657 0-3-1.343-3-3s1.343-3 3-3h17.375c1.657 0 3 1.343 3 3s-1.343 3-3 3"/>
         </g>
       </g>
-      <g id="gelogotext" class="fill-geblue dark:fill-white" transform="matrix(.35278 0 0 -.35278 -126.351 122.65)">
+      <g id="gelogotext" transform="matrix(.35278 0 0 -.35278 -126.351 122.65)">
         <g transform="translate(437.79 235.53)">
           <path d="m0 0c8.732 0 15.392 7.695 15.392 19.535 0 11.692-6.808 19.091-15.392 19.091-8.583 0-15.244-7.399-15.244-19.091 0-11.988 6.513-19.535 15.244-19.535m-5.624-21.016c-18.351 0-33.743 16.871-33.743 40.551 0 23.679 16.428 41.29 36.259 41.29 7.992 0 13.912-2.664 18.648-8.288 2.664 4.885 6.807 7.401 10.359 7.401 7.992 0 11.692-5.477 11.692-16.872v-46.915c0-14.059-0.888-24.715-5.476-32.262-6.808-11.397-18.944-17.463-35.519-17.463-21.311 0-34.187 7.844-34.187 17.018 0 5.92 4.292 10.212 10.064 10.212s12.728-6.216 25.011-6.216c11.396 0 18.204 6.956 18.204 19.683 0 0.889-0.148 1.777-0.148 2.813-5.032-7.252-11.988-10.952-21.164-10.952"/>
         </g>
@@ -90,10 +92,11 @@
     <div class="container mx-auto flex flex-wrap p-3 sm:p-5 flex-row items-center border-b-2 border-gray-100 dark:border-gray-700">
       <a class="flex title-font font-medium items-center mb-0" href="#title">
         <svg class="h-12 sm:h-16" viewBox="0 0 97 97" xmlns="http://www.w3.org/2000/svg">
-          <use href="#gelogo"/>
+          <use href="#gelogobackground" class="fill-geblue dark:fill-white"/>
+          <use href="#gelogo"           class="fill-white  dark:fill-geblue"/>
         </svg>
         <svg class="h-16 hidden md:inline" viewBox="0 0 245 97" xmlns="http://www.w3.org/2000/svg">
-          <use href="#gelogotext">
+          <use href="#gelogotext" class="fill-geblue dark:fill-white">
          </svg>
       </a>
       <nav class="ml-auto mr-auto flex flex-wrap items-center text-base justify-center font-vag-rounded">
@@ -117,8 +120,9 @@
   <section id="title" class="container px-2 sm:px-5 pb-10 xl:max-w-screen-xl mx-auto text-center items-center justify-center text-xl md:text-3xl">
     <svg class="mx-auto md:max-w-screen-md p-4 sm:p-10" viewBox="0 0 342 97" xmlns="http://www.w3.org/2000/svg">
       <title>Grounded Electrical</title>
-      <use href="#gelogo"/>
-      <use href="#gelogotext" x="97"/>
+      <use href="#gelogobackground"  class="fill-geblue dark:fill-white"/>
+      <use href="#gelogo"            class="fill-white  dark:fill-geblue"/>
+      <use href="#gelogotext" x="97" class="fill-geblue dark:fill-white"/>
     </svg>
     <p class="bg-geblue dark:bg-white text-white dark:text-geblue rounded-2xl py-4 px-2">
       We're your local, down to earth electrician.<br>
